@@ -1,14 +1,13 @@
 public class SalesManager {
-    protected int[] sales;
 
-    public SalesManager(int[] sales) {
+    protected long[] sales;
+    public SalesManager(long[] sales){
         this.sales = sales;
     }
-
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
-            if (sale > max) {
+    public long max(){
+        long max = -1;
+        for(long sale : sales){
+            if(sale > max){
                 max = sale;
             }
         }
@@ -16,9 +15,9 @@ public class SalesManager {
     }
 
     //TODO минимальное значение:
-    public int min() {
-        int min = sales[0] + 1;
-        for (int sale : sales) {
+    public long min() {
+        long min = sales[0] + 1;
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -27,17 +26,17 @@ public class SalesManager {
     }
 
     //TODO сумма всех ячеек:
-    public int sum() {
-        int sum = 0;
-        for (int sale : sales) {
+    public long sum() {
+        long sum = 0;
+        for (long sale : sales) {
             sum += sale;
         }
         return sum;
     }
 
     //TODO размер массива:
-    public int size() {
-        int size = sales.length;
+    public long size() {
+        long size = sales.length;
         return size;
     }
 }
