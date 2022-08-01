@@ -1,13 +1,16 @@
 public class SalesManager {
 
     protected long[] sales;
-    public SalesManager(long[] sales){
+
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
-    public long max(){
+
+    //TODO максимальное значение:
+    public long max() {
         long max = -1;
-        for(long sale : sales){
-            if(sale > max){
+        for (long sale : sales) {
+            if (sale > max) {
                 max = sale;
             }
         }
@@ -38,5 +41,10 @@ public class SalesManager {
     public long size() {
         long size = sales.length;
         return size;
+    }
+
+    public long average() {
+        long average = (sum() - max() - min()) / (size() - 2);
+        return average;
     }
 }
